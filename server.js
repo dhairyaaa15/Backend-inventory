@@ -16,7 +16,6 @@ app.use('/api/maintenance', maintenanceRoutes);
 app.get('/health', (req, res) => {
     res.status(200).send('OK');
   });
-  
 
 const PORT = process.env.PORT || 27017;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
