@@ -5,6 +5,13 @@ const customerRoutes = require('./routes/customerRoutes');
 const itemRoutes = require('./routes/itemRoutes');
 const maintenanceRoutes = require('./routes/maintenanceRoutes');
 
+const cors=require("cors");
+app.use(
+  cors({
+    origin:"http://localhost:5173/",
+  })
+)
+
 const app = express();
 connectDB();
 
