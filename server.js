@@ -5,11 +5,11 @@ const customerRoutes = require('./routes/customerRoutes');
 const itemRoutes = require('./routes/itemRoutes');
 const maintenanceRoutes = require('./routes/maintenanceRoutes');
 
-const cors = require('cors');
-app.use(cors());
-
 const app = express();
 connectDB();
+
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());
 
