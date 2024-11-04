@@ -5,13 +5,6 @@ const customerRoutes = require('./routes/customerRoutes');
 const itemRoutes = require('./routes/itemRoutes');
 const maintenanceRoutes = require('./routes/maintenanceRoutes');
 
-const cors=require("cors");
-app.use(
-  cors({
-    origin:"http://localhost:5173/",
-  })
-)
-
 const app = express();
 connectDB();
 
@@ -24,5 +17,5 @@ app.get('/health', (req, res) => {
     res.status(200).send('OK');
   });
 
-const PORT = 3000;
+const PORT = 5173;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
